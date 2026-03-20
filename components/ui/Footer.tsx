@@ -1,3 +1,5 @@
+import { FaGithub } from "react-icons/fa";
+
 export const Footer = () => {
   return (
     <footer className="bg-slate-950 pt-20 pb-10 border-t border-slate-900">
@@ -6,16 +8,16 @@ export const Footer = () => {
           {/* Brand Col */}
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-red-900 flex items-center justify-center text-white font-serif font-bold text-xl">
-                P
+              <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-serif font-bold text-xl">
+                <img src="/logo-pmkri-pwt.png" alt="Icon" />
               </div>
               <span className="font-serif font-bold text-xl text-white">
-                PMKRI PWT
+                PMKRI Purwokerto
               </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               Perhimpunan Mahasiswa Katolik Republik Indonesia Cabang Purwokerto
-              "Sanctus Albertus Magnus".
+              "Sanctus Paulus".
             </p>
             {/* Social Icons Placeholder */}
             <div className="flex gap-4">
@@ -104,10 +106,19 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} PMKRI Cabang Purwokerto. All rights
-            reserved.
-          </p>
+          <div className="text-slate-600 text-sm">
+            <p>
+              © {new Date().getFullYear()} PMKRI Cabang Purwokerto. All rights
+              reserved.
+            </p>
+            <p className="flex gap-2">
+              Develop by
+              <a href="http://github.com/blueskye16" target="_blank" className="flex items-center gap-1 hover:text-blue-500 hover:font-bold">
+                <FaGithub />
+                BlueSkye
+              </a>
+            </p>
+          </div>
           <div className="flex gap-6 text-sm text-slate-500">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy

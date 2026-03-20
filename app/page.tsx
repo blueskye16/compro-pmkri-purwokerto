@@ -82,19 +82,27 @@ const HOMEPAGE_QUERY = `{
     heading,
     paragraphs,
     "imageUrl": imageUrl.asset->url
+  },
+  "quotes": *[_type == "quotes"]{
+    _id,
+    author,
+    role,
+    quoteText,
+    avatarUrl
   }
 }`;
 
 interface HomePageData {
   hero: SanityHeroData | null;
   history: SanityHistoryData | null;
+  quotes: SanityQuoteData[] | null;
 }
 
 export default async function App() {
   const data = await client.fetch<HomePageData>(HOMEPAGE_QUERY);
 
   // coba ganti pake use case disini
-  if (!data.hero || !data.history) {
+  if (!data.hero || !data.history || !data.quotes) {
     return (
       <div className="min-h-screen flex items-center justify-center text-red-900 font-bold">
         Peringatan: Data Homepage tidak lengkap. Harap publikasikan Hero dan
@@ -127,7 +135,8 @@ export default async function App() {
           <HeroSection data={data.hero} />
           <HistorySection data={data.history} />
           <VisionMissionSection data={mockVisionMissionData} />
-          <TestimonialSection quotes={mockQuotes} />
+          {/* <TestimonialSection quotes={mockQuotes} /> */}
+          <TestimonialSection quotes={data.quotes} />
           <CTASection />
         </main>
         <Footer />
