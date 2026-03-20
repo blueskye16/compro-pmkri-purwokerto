@@ -13,6 +13,8 @@ import { VisionMissionSection } from "@/components/sections/VisionMissionSection
 import { CTASection } from "@/components/ui/CTASection";
 import { Footer } from "@/components/ui/Footer";
 
+export const revalidate = 60;
+
 const mockVisionMissionData: SanityVisionMissionData = {
   _id: "vm-1",
   vision:
