@@ -2,6 +2,7 @@
 import { SanityHistoryData } from "@/lib/sanity-types";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "../ui/FadeIn";
+import { PortableText } from "next-sanity";
 
 export const HistorySection = ({ data }: { data: SanityHistoryData }) => {
   return (
@@ -14,11 +15,11 @@ export const HistorySection = ({ data }: { data: SanityHistoryData }) => {
               <img
                 src={data.imageUrl}
                 alt="Sejarah"
-                className="rounded-lg shadow-xl w-full object-cover h-[500px]"
+                className="rounded-lg shadow-xl w-full object-cover h-125"
               />
               <div className="absolute -bottom-6 -right-6 bg-red-900 text-white p-6 rounded-lg shadow-lg">
                 <span className="block text-4xl font-serif font-bold">
-                  1947
+                  16 Juni 1963
                 </span>
                 <span className="text-sm font-medium text-amber-200 uppercase tracking-wider">
                   Awal Pergerakan
@@ -39,9 +40,10 @@ export const HistorySection = ({ data }: { data: SanityHistoryData }) => {
                 {data.heading}
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed text-lg">
-                {data.paragraphs.map((p, i) => (
+                <PortableText value={data.paragraphs} />
+                {/* {data.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
-                ))}
+                ))} */}
               </div>
               <button className="mt-8 text-red-900 font-semibold flex items-center gap-2 hover:text-red-700 transition-colors group">
                 Baca Selengkapnya

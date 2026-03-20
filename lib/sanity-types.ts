@@ -10,7 +10,7 @@ export interface SanityHeroData {
 export interface SanityHistoryData {
   _id: string;
   heading: string;
-  paragraphs: string[];
+  paragraphs: any[];
   imageUrl: string;
 }
 
