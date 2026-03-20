@@ -116,7 +116,7 @@ export const Footer = () => {
               © {new Date().getFullYear()} PMKRI Cabang Purwokerto. All rights
               reserved.
             </p>
-            <p className="flex gap-2">
+            {/* <p className="flex gap-2">
               Develop by
               <a
                 href="http://github.com/blueskye16"
@@ -126,7 +126,7 @@ export const Footer = () => {
                 <FaGithub />
                 BlueSkye
               </a>
-            </p>
+            </p> */}
           </div>
           <div className="flex gap-6 text-sm text-slate-500">
             <a href="#" className="hover:text-white transition-colors">
