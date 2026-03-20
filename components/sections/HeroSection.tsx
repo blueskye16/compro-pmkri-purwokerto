@@ -15,7 +15,7 @@ export const HeroSection = ({ data }: { data: SanityHeroData }) => {
           alt="Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/70 to-red-950/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-slate-900/80 via-slate-900/70 to-red-950/90" />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 md:px-12 text-center text-white">
@@ -37,7 +37,7 @@ export const HeroSection = ({ data }: { data: SanityHeroData }) => {
           Merajut <span className="text-amber-500 italic">Intelektualitas</span>
           <br />
           Membangun{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-amber-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-400 to-amber-500">
             Solidaritas
           </span>
         </motion.h1>
@@ -72,7 +72,7 @@ export const HeroSection = ({ data }: { data: SanityHeroData }) => {
         transition={{ repeat: Infinity, duration: 2 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
       >
-        <div className="w-[30px] h-[50px] border-2 border-white/30 rounded-full flex justify-center p-1">
+        <div className="w-7.5 h-12.5 border-2 border-white/30 rounded-full flex justify-center p-1">
           <div className="w-1.5 h-3 bg-white/60 rounded-full" />
         </div>
       </motion.div>
