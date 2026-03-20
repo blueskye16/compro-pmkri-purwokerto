@@ -1,3 +1,4 @@
+"use client"
 import { SanityHeroData } from "@/lib/sanity-types";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -11,6 +12,7 @@ export const HeroSection = ({ data }: { data: SanityHeroData }) => {
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <img
+          // src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
           src={data.backgroundImageUrl}
           alt="Background"
           className="w-full h-full object-cover"
@@ -34,6 +36,7 @@ export const HeroSection = ({ data }: { data: SanityHeroData }) => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight"
         >
+          {/* {data.title} */}
           Merajut <span className="text-amber-500 italic">Intelektualitas</span>
           <br />
           Membangun{" "}

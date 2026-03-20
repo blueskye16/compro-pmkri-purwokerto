@@ -1,3 +1,4 @@
+"use client"
 import { SanityQuoteData } from "@/lib/sanity-types";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";

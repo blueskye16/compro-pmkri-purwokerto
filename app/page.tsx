@@ -1,26 +1,10 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Menu,
-  X,
-  ChevronRight,
-  ChevronLeft,
-  Target,
-  Eye,
-  BookOpen,
-  Users,
-  MapPin,
-  Mail,
-  Phone,
-  ArrowRight,
-} from "lucide-react";
 import {
   SanityHeroData,
   SanityHistoryData,
   SanityVisionMissionData,
   SanityQuoteData,
 } from "@/lib/sanity-types";
+import { client } from "@/sanity/lib/client";
 import { Navbar } from "@/components/ui/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { HistorySection } from "@/components/sections/HistorySection";
@@ -106,7 +90,23 @@ const mockQuotes: SanityQuoteData[] = [
   },
 ];
 
-export default function App() {
+const HERO_QUERY = `*[_type == "hero"][0]{
+  _id,
+  title,
+  slogan,
+  "backgroundImageUrl": backgroundImageUrl.asset->url,
+  primaryCtaText,
+  secondaryCtaText
+  }`;
+
+export default async function App() {
+  const heroData = await client.fetch<SanityHeroData>(HERO_QUERY);
+
+  if (!heroData) {
+    return (
+      <div>Peringatan: Data Hero belum dipublikasikan di Sanity Studio.</div>
+    );
+  }
   return (
     <>
       <style
@@ -130,6 +130,7 @@ export default function App() {
         <Navbar />
         <main>
           <HeroSection data={mockHeroData} />
+          {/* <HeroSection data={heroData} /> */}
           <HistorySection data={mockHistoryData} />
           <VisionMissionSection data={mockVisionMissionData} />
           <TestimonialSection quotes={mockQuotes} />

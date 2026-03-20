@@ -1,3 +1,4 @@
+"use client"
 import { SanityHistoryData } from "@/lib/sanity-types";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "../ui/FadeIn";
