@@ -13,28 +13,6 @@ import { VisionMissionSection } from "@/components/sections/VisionMissionSection
 import { CTASection } from "@/components/ui/CTASection";
 import { Footer } from "@/components/ui/Footer";
 
-// const mockHeroData: SanityHeroData = {
-//   _id: "hero-1",
-//   title: "PMKRI Cabang Purwokerto",
-//   slogan:
-//     "Pro Ecclesia et Patria. Membangun Intelektualitas, Merajut Solidaritas.",
-//   backgroundImageUrl:
-//     "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-//   primaryCtaText: "Bergabung Bersama Kami",
-//   secondaryCtaText: "Pelajari Sejarah",
-// };
-
-// const mockHistoryData: SanityHistoryData = {
-//   _id: "hist-1",
-//   heading: "Akar Perjuangan di Bumi Panglima Besar",
-//   paragraphs: [
-//     "Kehadiran PMKRI Cabang Purwokerto tidak terlepas dari dinamika perjuangan mahasiswa Katolik di kancah nasional dan kebutuhan akan wadah pembinaan intelektual di wilayah Banyumas. Berdiri dengan semangat melayani gereja dan tanah air.",
-//     "Melalui berbagai fase sejarah, cabang ini telah melahirkan kader-kader pemimpin yang berkontribusi nyata bagi masyarakat, memadukan nilai-nilai kekatolikan dengan semangat kebangsaan yang inklusif.",
-//   ],
-//   imageUrl:
-//     "https://images.unsplash.com/photo-1577414343997-8c3ba0ab3e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-// };
-
 const mockVisionMissionData: SanityVisionMissionData = {
   _id: "vm-1",
   vision:
@@ -107,22 +85,6 @@ const HOMEPAGE_QUERY = `{
   }
 }`;
 
-// const HERO_QUERY = `*[_type == "hero"][0]{
-//   _id,
-//   title,
-//   slogan,
-//   "backgroundImageUrl": backgroundImageUrl.asset->url,
-//   primaryCtaText,
-//   secondaryCtaText
-//   }`;
-
-// const HISTORY_QUERY = `*[_type == "history"][0] {
-//   _id,
-//   heading,
-//   paragraphs,
-//   "imageUrl": imageUrl.asset->url
-// }`;
-
 interface HomePageData {
   hero: SanityHeroData | null;
   history: SanityHistoryData | null;
@@ -131,6 +93,7 @@ interface HomePageData {
 export default async function App() {
   const data = await client.fetch<HomePageData>(HOMEPAGE_QUERY);
 
+  // coba ganti pake use case disini
   if (!data.hero || !data.history) {
     return (
       <div className="min-h-screen flex items-center justify-center text-red-900 font-bold">
@@ -139,20 +102,6 @@ export default async function App() {
       </div>
     );
   }
-  // const heroData = await client.fetch<SanityHeroData>(HERO_QUERY);
-  // const historyData = await client.fetch<SanityHistoryData>(HISTORY_QUERY);
-
-  // if (!heroData) {
-  //   return (
-  //     <div>Peringatan: Data Hero belum dipublikasikan di Sanity Studio.</div>
-  //   );
-  // }
-
-  // if (!historyData) {
-  //   return (
-  //     <div>Peringatan: Data History belum dipublikasikan di Sanity Studio.</div>
-  //   );
-  // }
   return (
     <>
       <style
