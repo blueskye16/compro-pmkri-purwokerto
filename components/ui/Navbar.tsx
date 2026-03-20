@@ -20,8 +20,8 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <div className="flex items-center gap-3">
           {/* Placeholder for Logo */}
-          <div className="w-10 h-10 rounded-full bg-red-900 flex items-center justify-center text-white font-serif font-bold text-xl">
-            P
+          <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-serif font-bold text-xl">
+            <img src="/logo-pmkri-purwokerto.png" alt="icon" />
           </div>
           <span
             className={`font-serif font-bold text-lg tracking-tight ${isScrolled ? "text-slate-900" : "text-white"}`}
