@@ -5,7 +5,7 @@ export const CTASection = () => {
     <section id="kontak" className="py-24 bg-white">
       <div className="container mx-auto px-6 md:px-12">
         <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl relative">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-red-900/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+          <div className="absolute top-0 right-0 w-100 h-100 bg-red-900/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
 
           <div className="grid md:grid-cols-2 p-10 md:p-16 relative z-10 gap-12">
             <div className="flex flex-col justify-center">
@@ -38,8 +38,7 @@ export const CTASection = () => {
                     Sekretariat Margasiswa
                   </h4>
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    Jl. Kampus No. XX, Grendeng, Purwokerto Utara, Kab.
-                    Banyumas, Jawa Tengah
+                    Jl. A. Yani No.20, Karangjengkol, Sokanegara, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa Tengah
                   </p>
                 </div>
               </div>
@@ -50,7 +49,7 @@ export const CTASection = () => {
                 <div>
                   <h4 className="text-white font-bold mb-1">Email</h4>
                   <p className="text-slate-400 text-sm">
-                    pmkripurwokerto@gmail.com
+                    pmkri.purwokerto@gmail.com
                   </p>
                 </div>
               </div>
@@ -63,7 +62,7 @@ export const CTASection = () => {
                     Telepon / WhatsApp
                   </h4>
                   <p className="text-slate-400 text-sm">
-                    +62 812 3456 7890 (Humas)
+                    +62 895-3608-1019 (Humas)
                   </p>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGoogle, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -20,20 +20,25 @@ export const Footer = () => {
               "Sanctus Paulus".
             </p>
             {/* Social Icons Placeholder */}
-            <div className="flex gap-4">
-              {[1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  className="w-8 h-8 rounded-full bg-white/5 hover:bg-amber-500 hover:text-slate-900 flex items-center justify-center text-white/50 transition-colors cursor-pointer"
-                >
-                  <span className="sr-only">Social {i}</span>
-                  <div
-                    className="w-4 h-4 bg-current"
-                    style={{ mask: "url(#)", WebkitMask: "url(#)" }}
-                  />{" "}
-                  {/* Icon shape */}
+            <div className="flex gap-2">
+              <a href="https://share.google/PVeXA4PWUOu502kpc" target="_blank">
+                <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-amber-500 hover:text-slate-900 flex items-center justify-center text-white/50 transition-colors cursor-pointer">
+                  <FaGoogle />
                 </div>
-              ))}
+              </a>
+              <a href="https://linkedin.com/company/pmkri-purwokerto" target="_blank">
+                <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-amber-500 hover:text-slate-900 flex items-center justify-center text-white/50 transition-colors cursor-pointer">
+                  <FaLinkedin />
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/pmkri.purwokerto?igsh=NDVtYnd0bTgyaTRz"
+                target="_blank"
+              >
+                <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-amber-500 hover:text-slate-900 flex items-center justify-center text-white/50 transition-colors cursor-pointer">
+                  <FaInstagram />
+                </div>
+              </a>
             </div>
           </div>
 
@@ -113,7 +118,11 @@ export const Footer = () => {
             </p>
             <p className="flex gap-2">
               Develop by
-              <a href="http://github.com/blueskye16" target="_blank" className="flex items-center gap-1 hover:text-blue-500 hover:font-bold">
+              <a
+                href="http://github.com/blueskye16"
+                target="_blank"
+                className="flex items-center gap-1 hover:text-blue-500 hover:font-bold"
+              >
                 <FaGithub />
                 BlueSkye
               </a>
