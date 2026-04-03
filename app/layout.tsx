@@ -13,7 +13,7 @@ const inter = Inter({
 // });
 
 // const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",  
+//   variable: "--font-geist-mono",
 //   subsets: ["latin"],
 // });
 
@@ -28,15 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} h-full antialiased`}
-    >
-    {/* <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    > */}
-      <body suppressHydrationWarning className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }

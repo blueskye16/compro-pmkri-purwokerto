@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { SanityHeroData } from "@/lib/sanity-types";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";

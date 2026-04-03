@@ -9,6 +9,5 @@ export const quotes = defineType({
     defineField({ name: "role", title: "Author Role", type: "string" }),
     defineField({ name: "quoteText", title: "Quote Text", type: "string" }),
     defineField({ name: "avatarUrl", title: "Author Profile", type: "image" }),
-
-  ]
-})
+  ],
+});

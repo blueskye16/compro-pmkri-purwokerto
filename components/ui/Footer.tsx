@@ -26,7 +26,10 @@ export const Footer = () => {
                   <FaGoogle />
                 </div>
               </a>
-              <a href="https://linkedin.com/company/pmkri-purwokerto" target="_blank">
+              <a
+                href="https://linkedin.com/company/pmkri-purwokerto"
+                target="_blank"
+              >
                 <div className="w-8 h-8 rounded-full bg-white/5 hover:bg-amber-500 hover:text-slate-900 flex items-center justify-center text-white/50 transition-colors cursor-pointer">
                   <FaLinkedin />
                 </div>

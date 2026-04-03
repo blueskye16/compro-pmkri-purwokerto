@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { SanityVisionMissionData } from "@/lib/sanity-types";
 import { BookOpen, Users, Target, Eye } from "lucide-react";
 import { FadeIn } from "../ui/FadeIn";

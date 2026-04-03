@@ -1,0 +1,5 @@
+- update ke versi next.js 15.1
+  - pnpm add next@15.1.0
+  - Remove-Item -Recurse -Force .next
+  - pnpm install
+-
