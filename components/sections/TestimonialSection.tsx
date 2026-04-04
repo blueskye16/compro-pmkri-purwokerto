@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { FadeIn } from "../ui/FadeIn";
+import { AcademicCapIcon } from "../icons";
 
 export const TestimonialSection = ({
   quotes,
@@ -20,11 +21,10 @@ export const TestimonialSection = ({
     <section className="relative overflow-hidden bg-red-950 py-24 text-white">
       {/* Texture overlay */}
       <div className="bg-pattern absolute inset-0 opacity-20" />
-      {/* <div className="bg-patern bg-[url('data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E')] absolute inset-0 opacity-5" /> */}
 
       <div className="relative z-10 container mx-auto px-6 md:px-12">
         <FadeIn>
-          <div className="mb-16 flex flex-col items-center">
+          <div className="mb-4 flex flex-col items-center">
             <span className="mb-4 text-sm font-bold tracking-wider text-amber-500 uppercase">
               Kutipan Alumni & Senior
             </span>
@@ -35,31 +35,35 @@ export const TestimonialSection = ({
         </FadeIn>
 
         <div className="relative mx-auto max-w-4xl">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="text-center"
-            >
-              <div className="mb-6 font-serif text-6xl leading-none text-amber-500/30">
-                "
-              </div>
-              <p className="mb-10 font-serif text-2xl leading-relaxed font-light text-slate-100 md:text-3xl">
-                {quotes[currentIndex].quoteText}
-              </p>
-              <div>
-                <h4 className="text-lg font-bold">
-                  {quotes[currentIndex].author}
-                </h4>
-                <p className="text-sm text-amber-400">
-                  {quotes[currentIndex].role}
+          <div className="flex min-h-80 flex-col justify-center md:min-h-62.5">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="text-center"
+              >
+                <AcademicCapIcon className="mx-auto mb-4 size-8 text-blue-600 shadow-sm" />
+                {/* <h1 className="mb-2 font-serif text-3xl leading-none text-amber-500/30">"</h1> */}
+                {/* <div className="mb-2 font-serif text-6xl leading-none text-amber-500/30">
+                  "
+                </div> */}
+                <p className="mb-10 font-serif text-xl leading-relaxed font-light text-slate-100 md:text-3xl">
+                  {quotes[currentIndex].quoteText}
                 </p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+                <div>
+                  <h4 className="text-lg font-bold">
+                    {quotes[currentIndex].author}
+                  </h4>
+                  <p className="text-sm text-amber-400">
+                    {quotes[currentIndex].role}
+                  </p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
           {/* Controls */}
           <div className="mt-12 flex items-center justify-center gap-6">

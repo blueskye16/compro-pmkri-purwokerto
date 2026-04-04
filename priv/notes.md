@@ -3,3 +3,6 @@
   - Remove-Item -Recurse -Force .next
   - pnpm install
 -
+
+- benerin bagian quote, tingginya uda bener
+- https://heropatterns.com/ -> buat pattern background hero, bagus cui
