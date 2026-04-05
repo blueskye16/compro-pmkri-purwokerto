@@ -18,42 +18,43 @@ export const VisionMissionSection = ({
   return (
     <section
       id="visi-misi"
-      className="py-24 bg-slate-50 relative overflow-hidden dark:bg-slate-950 transition-colors duration-500"
+      className="relative overflow-hidden bg-slate-50 py-24 transition-colors duration-500 dark:bg-slate-950"
     >
-      {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-125 h-125 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-      <div className="absolute bottom-0 left-0 w-150 h-150 bg-red-900/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
+      {/* Decorative background elements (Ambient Glow) */}
+      <div className="absolute top-0 right-0 h-125 w-125 translate-x-1/3 -translate-y-1/2 rounded-full bg-amber-500/10 blur-3xl transition-colors duration-500 dark:bg-amber-600/10" />
+      <div className="absolute bottom-0 left-0 h-150 w-150 -translate-x-1/4 translate-y-1/3 rounded-full bg-red-900/5 blur-3xl transition-colors duration-500 dark:bg-red-900/20" />
+      {/* <div className="dark:to-bg-pattern absolute inset-0 bg-linear-to-b opacity-30 transition-opacity duration-500 dark:from-slate-950 dark:via-slate-950" /> */}
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+      <div className="relative z-10 container mx-auto px-6 md:px-12">
+        <div className="mx-auto mb-20 max-w-3xl text-center">
           <FadeIn>
-            <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="mb-4 flex items-center justify-center gap-4">
               <div className="h-px w-8 bg-amber-500" />
-              <span className="text-red-900 font-bold tracking-wider uppercase text-sm">
+              <span className="text-sm font-bold tracking-wider text-red-900 uppercase transition-colors duration-500 dark:text-red-400">
                 Arah & Tujuan
               </span>
               <div className="h-px w-8 bg-amber-500" />
             </div>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
+            <h2 className="mb-6 font-serif text-3xl font-bold text-slate-900 transition-colors duration-500 md:text-5xl dark:text-white">
               Visi & Misi
             </h2>
-            <p className="text-xl text-slate-600 font-medium italic">
+            <p className="text-xl font-medium text-slate-600 italic transition-colors duration-500 dark:text-slate-300">
               "{data.vision}"
             </p>
           </FadeIn>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {data.missions.map((mission, index) => (
             <FadeIn key={index} delay={index * 0.1} className="h-full">
-              <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group h-full">
-                <div className="w-14 h-14 rounded-lg bg-red-50 text-red-900 flex items-center justify-center mb-6 group-hover:bg-red-900 group-hover:text-white transition-colors duration-300">
+              <div className="group h-full rounded-xl border border-slate-100 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl dark:border-white/10 dark:bg-slate-900/50 dark:backdrop-blur-sm">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-red-50 text-red-900 transition-colors duration-300 group-hover:bg-red-900 group-hover:text-white dark:bg-red-950/50 dark:text-red-400 dark:group-hover:bg-red-800">
                   {icons[mission.iconName] || <Target size={24} />}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 font-serif">
+                <h3 className="mb-3 font-serif text-xl font-bold text-slate-900 transition-colors duration-500 dark:text-white">
                   {mission.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="leading-relaxed text-slate-600 transition-colors duration-500 dark:text-slate-400">
                   {mission.description}
                 </p>
               </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SanityHistoryData } from "@/lib/sanity-types";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
@@ -20,12 +21,20 @@ export const HistorySection = ({ data }: { data: SanityHistoryData }) => {
                   Di mode gelap kita gunakan opacity rendah (amber-900/30) agar menyatu dengan latar gelap */}
               <div className="absolute -inset-4 -z-10 rotate-3 transform rounded-lg bg-amber-100 transition-colors duration-500 dark:bg-amber-900/30" />
 
-              <img
+              <Image
+                src={data.imageUrl}
+                alt="Sejarah"
+                width={1000}
+                height={1000}
+                // FOTO: Tambahkan dark:opacity-90 agar foto yang terlalu terang tidak menyilaukan mata di dark mode
+                className="h-125 w-full rounded-lg border border-slate-300 object-cover shadow-xl grayscale-75 transition-all duration-500 dark:border-white/10 dark:opacity-90 object-[25%_75%]"
+              />
+              {/* <img
                 src={data.imageUrl}
                 alt="Sejarah"
                 // FOTO: Tambahkan dark:opacity-90 agar foto yang terlalu terang tidak menyilaukan mata di dark mode
                 className="h-125 w-full rounded-lg border border-slate-300 object-cover shadow-xl transition-all duration-500 dark:border-white/10 dark:opacity-90"
-              />
+              /> */}
 
               {/* KOTAK TANGGAL: Di mode gelap, kita pakai efek 'kaca' (backdrop-blur) dengan merah semi-transparan */}
               <div className="absolute -right-6 -bottom-6 rounded-lg bg-red-900 p-6 text-white shadow-lg transition-all duration-500 dark:border dark:border-red-900/50 dark:bg-red-950/80 dark:backdrop-blur-md">

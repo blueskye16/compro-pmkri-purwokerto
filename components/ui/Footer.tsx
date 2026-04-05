@@ -13,7 +13,7 @@ export const Footer = () => {
   const firstRouteList = [
     routeItems.sejarah,
     routeItems.visiMisi,
-    { ...routeItems.pendidikan, label: "Pendidikan PMKRI"},
+    { ...routeItems.pendidikan, label: "Pendidikan PMKRI" },
     // routeItems.pendidikan,
   ];
 
@@ -86,12 +86,12 @@ export const Footer = () => {
             </h4>
             <div className="flex gap-2">
               <a href="mailto:pmkri.purwokerto@gmail.com" target="_blank">
-                <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-amber-500 hover:text-slate-900">
+                <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-amber-500 hover:text-white">
                   <IoIosMail />
                 </div>
               </a>
               <a href="https://wa.me/+6289536081019" target="_blank">
-                <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-amber-500 hover:text-slate-900">
+                <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-amber-500 hover:text-white">
                   <FaWhatsapp />
                 </div>
               </a>
@@ -99,7 +99,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/pmkri.purwokerto?igsh=NDVtYnd0bTgyaTRz"
                 target="_blank"
               >
-                <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-amber-500 hover:text-slate-900">
+                <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-amber-500 hover:text-white">
                   <FaInstagram />
                 </div>
               </a>
@@ -107,7 +107,7 @@ export const Footer = () => {
                 href="https://linkedin.com/company/pmkri-purwokerto"
                 target="_blank"
               >
-                <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-amber-500 hover:text-slate-900">
+                <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-amber-500 hover:text-white">
                   <FaLinkedin />
                 </div>
               </a>
@@ -134,7 +134,7 @@ export const Footer = () => {
               target="_blank"
             >
               Dev by{" "}
-              <FaGithub className="group-hover:text-white transition-colors" />
+              <FaGithub className="transition-colors group-hover:text-white" />
             </a>
           </span>
           {/* <div className="flex gap-6 text-sm text-slate-500">

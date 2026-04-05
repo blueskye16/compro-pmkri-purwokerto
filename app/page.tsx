@@ -105,7 +105,7 @@ export default async function App() {
 
   if (!data.hero || !data.history || !data.quotes) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-red-900 font-bold">
+      <div className="flex min-h-screen items-center justify-center font-bold text-red-900">
         Peringatan: Data Homepage tidak lengkap. Harap publikasikan Hero dan
         History di Sanity Studio.
       </div>
@@ -129,14 +129,13 @@ export default async function App() {
       `,
         }}
       />
-      <div className="min-h-screen bg-white text-slate-800 overflow-x-hidden selection:bg-amber-200 selection:text-red-950">
-        {/* <Navbar /> */}
+      {/* PERBAIKAN: Background transisi ditaruh di sini agar meliputi seluruh aplikasi */}
+      <div className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-800 transition-colors duration-500 selection:bg-amber-200 selection:text-red-950 dark:bg-slate-950 dark:text-slate-200 dark:selection:bg-amber-700 dark:selection:text-white">
         <Navbar />
         <main>
           <HeroSection data={data.hero} />
           <HistorySection data={data.history} />
           <VisionMissionSection data={mockVisionMissionData} />
-          {/* <TestimonialSection quotes={mockQuotes} /> */}
           <TestimonialSection quotes={data.quotes} />
           <CTASection />
         </main>

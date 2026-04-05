@@ -18,9 +18,11 @@ export const TestimonialSection = ({
     setCurrentIndex((prev) => (prev - 1 + quotes.length) % quotes.length);
 
   return (
-    <section className="relative overflow-hidden bg-red-950 py-24 text-white">
+    // PERBAIKAN: Background transisi. Terang = Merah pekat, Gelap = Slate pekat dengan gradient
+    <section className="relative overflow-hidden bg-red-950 py-24 text-white transition-colors duration-500 dark:bg-slate-950 dark:bg-radial dark:from-red-900/20 dark:to-slate-950">
+    {/* <section className="relative overflow-hidden bg-red-950 py-24 text-white transition-colors duration-500 dark:bg-slate-950 dark:bg-radial dark:from-red-900/20 dark:to-slate-950"> */}
       {/* Texture overlay */}
-      <div className="bg-pattern absolute inset-0 opacity-20" />
+      <div className="bg-pattern absolute inset-0 opacity-20 transition-opacity duration-500" />
 
       <div className="relative z-10 container mx-auto px-6 md:px-12">
         <FadeIn>
@@ -45,11 +47,9 @@ export const TestimonialSection = ({
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="text-center"
               >
-                <AcademicCapIcon className="mx-auto mb-4 size-8 text-blue-600 shadow-sm" />
-                {/* <h1 className="mb-2 font-serif text-3xl leading-none text-amber-500/30">"</h1> */}
-                {/* <div className="mb-2 font-serif text-6xl leading-none text-amber-500/30">
-                  "
-                </div> */}
+                {/* PERBAIKAN WARNA ICON SESUAI TEMA PMKRI (Amber/Merah, bukan Biru) */}
+                <AcademicCapIcon className="mx-auto mb-4 size-10 text-amber-500/80 shadow-sm" />
+
                 <p className="mb-10 font-serif text-xl leading-relaxed font-light text-slate-100 md:text-3xl">
                   {quotes[currentIndex].quoteText}
                 </p>
