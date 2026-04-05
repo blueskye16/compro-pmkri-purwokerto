@@ -111,7 +111,7 @@ export default function KontakPage() {
             <FadeInStagger className="h-full w-full">
               <FadeIn className="h-full w-full">
                 {/* OPTIMASI MOBILE: Menggunakan tinggi spesifik 400px untuk HP, dan menyesuaikan hingga 600px di Desktop */}
-                <div className="group relative h-[400px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-md transition-all duration-500 hover:shadow-xl lg:h-full lg:min-h-[600px] dark:border-white/10 dark:bg-slate-800">
+                <div className="group relative h-100 w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-md transition-all duration-500 hover:shadow-xl lg:h-full lg:min-h-[600px] dark:border-white/10 dark:bg-slate-800">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.445422348309!2d109.23091889999999!3d-7.415854800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e5e6ca2a04b%3A0xdf3624885ae4bc78!2sPMKRI%20Cabang%20Purwokerto%20%22St%20Paulus%22!5e0!3m2!1sid!2sid!4v1775399459967!5m2!1sid!2sid"
                     width="100%"
