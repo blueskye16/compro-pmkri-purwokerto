@@ -1,0 +1,82 @@
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import { Navbar } from "@/components/ui/Navbar";
+import { Footer } from "@/components/ui/Footer";
+
+export default function PageSejarah() {
+  return (
+    <main className="min-h-screen bg-slate-50 pt-32">
+      <Navbar />
+      <div className="container mx-auto max-w-3xl px-6">
+        {/* Header Halaman */}
+        <div className="mb-12 border-b border-slate-300 pb-8">
+          {/* Warna amber diubah menjadi 600 agar lebih terbaca di latar terang */}
+          <span className="text-sm font-bold tracking-wider text-amber-600 uppercase">
+            Jejak Langkah
+          </span>
+          <h1 className="mt-2 font-serif text-4xl font-bold text-red-900 md:text-5xl">
+            Sejarah PMKRI
+          </h1>
+        </div>
+
+        {/* Konten Sejarah */}
+        {/* HAPUS prose-invert. Gunakan prose biasa agar Tailwind mewarnai teks jadi gelap */}
+        <article className="prose prose-lg max-w-none text-slate-700 mb-14">
+          <p className="text-xl leading-relaxed font-light text-slate-600">
+            Perhimpunan Mahasiswa Katolik Republik Indonesia (PMKRI) lahir dari
+            fusi antara Federasi Katholieke Studenten Vereniging (KSV) dan PMKRI
+            Yogyakarta pada 11 Juni 1950. Namun, hari lahirnya secara historis
+            ditetapkan pada{" "}
+            <strong className="text-slate-900">25 Mei 1947</strong>.
+          </p>
+
+          <h3 className="mt-8 font-serif text-2xl font-bold text-red-900">
+            Lahirnya Cabang Purwokerto
+          </h3>
+          <p>
+            Di tengah dinamika pergerakan mahasiswa secara nasional, PMKRI terus
+            melebarkan sayapnya untuk menjadi wadah pembinaan mahasiswa Katolik
+            di berbagai daerah.{" "}
+            <strong className="text-slate-900">
+              PMKRI Cabang Purwokerto "Santo Paulus"
+            </strong>{" "}
+            secara resmi didirikan pada tanggal{" "}
+            <strong className="text-slate-900">16 Juni 1963</strong>.
+          </p>
+
+          <h3 className="mt-8 font-serif text-2xl font-bold text-red-900">
+            Dinamika & Pergerakan Bangsa
+          </h3>
+          <p>
+            Sepanjang sejarahnya, PMKRI tidak pernah lepas dari urat nadi
+            pergerakan bangsa Indonesia:
+          </p>
+          <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-red-900">
+            <li>
+              <strong className="text-slate-900">1965-1969:</strong> Menjadi
+              salah satu pelopor berdirinya Kesatuan Aksi Mahasiswa Indonesia
+              (KAMI) yang melahirkan Tiga Tuntutan Rakyat (Tritura).
+            </li>
+            <li>
+              <strong className="text-slate-900">1972:</strong> Turut membidani
+              lahirnya forum komunikasi Kelompok Cipayung bersama HMI, GMKI,
+              GMNI, dan PMII sebagai kekuatan kontrol sosial.
+            </li>
+            <li>
+              <strong className="text-slate-900">1998:</strong> Terlibat aktif
+              secara nasional dalam menyuarakan amanat penderitaan rakyat pada
+              era Gerakan Reformasi.
+            </li>
+          </ul>
+
+          <div className="mt-14 rounded-xl border border-red-200 bg-red-50 p-6">
+            <p className="text-center font-serif text-xl font-medium text-red-900 italic">
+              "Religio Omnium Scientiarum Anima. Pro Ecclesia et Patria!"
+            </p>
+          </div>
+        </article>
+      </div>
+      <Footer />
+    </main>
+  );
+}

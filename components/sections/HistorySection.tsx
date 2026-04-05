@@ -1,7 +1,7 @@
 "use client";
 import { SanityHistoryData } from "@/lib/sanity-types";
 import { ArrowRight } from "lucide-react";
-import { FadeIn } from "../ui/FadeIn";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { PortableText } from "next-sanity";
 
 export const HistorySection = ({ data }: { data: SanityHistoryData }) => {

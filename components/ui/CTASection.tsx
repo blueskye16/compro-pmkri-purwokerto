@@ -27,8 +27,8 @@ export const CTASection = () => {
         </div>
       </div>
       {/* Contact Info */}
-      <div className="flex flex-col gap-6 rounded-xl border border-white/10 bg-white/5 p-4">
-        <div className="flex flex-col items-start gap-4 sm:flex-row">
+      <div className="flex gap-6 rounded-xl border border-white/10 bg-white/5 p-4">
+        <div className="flex flex-col items-start gap-4">
           {/* Secretariat */}
           <div className="flex gap-2">
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10">

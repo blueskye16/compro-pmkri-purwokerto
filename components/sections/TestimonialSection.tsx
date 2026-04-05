@@ -3,8 +3,8 @@ import { SanityQuoteData } from "@/lib/sanity-types";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
-import { FadeIn } from "../ui/FadeIn";
-import { AcademicCapIcon } from "../icons";
+import { FadeIn } from "@/components/ui/FadeIn";
+import { AcademicCapIcon } from "@/components/icons";
 
 export const TestimonialSection = ({
   quotes,
