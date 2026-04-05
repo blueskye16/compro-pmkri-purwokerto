@@ -31,3 +31,10 @@ export interface SanityQuoteData {
   quoteText: string;
   avatarUrl?: string;
 }
+
+export interface SanityGalleryData {
+  _id: string;
+  title: string;
+  mainImageUrl: string;
+  category: string;
+}

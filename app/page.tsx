@@ -103,7 +103,6 @@ interface HomePageData {
 export default async function App() {
   const data = await client.fetch<HomePageData>(HOMEPAGE_QUERY);
 
-  // coba ganti pake use case disini
   if (!data.hero || !data.history || !data.quotes) {
     return (
       <div className="min-h-screen flex items-center justify-center text-red-900 font-bold">
