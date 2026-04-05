@@ -9,7 +9,7 @@ export default function KontakPage() {
     <>
       <main className="relative min-h-screen overflow-hidden bg-slate-50 pt-32 pb-20 transition-colors duration-500 dark:bg-slate-950">
         {/* Background Pattern: Opacity disesuaikan untuk mode gelap agar tidak bertabrakan */}
-        <div className="bg-pattern absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-15" />
+        <div className="bg-pattern pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-15" />
 
         <Navbar />
 

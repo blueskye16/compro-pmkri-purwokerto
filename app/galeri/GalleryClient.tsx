@@ -71,9 +71,9 @@ export default function GalleryClient({ initialData }: GalleryClientProps) {
   return (
     <>
       <main className="relative min-h-screen bg-slate-50 pt-32 dark:bg-slate-950">
-        <div className="bg-pattern absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-15" />
+        <div className="bg-pattern pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-15" />
         <Navbar />
-        <div className="container mx-auto mb-14 px-6 md:px-12">
+        <div className="container z-10 mx-auto mb-14 px-6 md:px-12">
           <div className="mb-8 border-b border-slate-300 pb-8 text-center md:text-left">
             <span className="text-sm font-bold tracking-wider text-amber-600 uppercase">
               Dokumentasi
@@ -84,15 +84,16 @@ export default function GalleryClient({ initialData }: GalleryClientProps) {
           </div>
 
           {/* Filter Kategori Dinamis */}
-          <div className="mb-10 flex flex-wrap justify-center gap-3 md:justify-start">
+<div className="mb-10 flex flex-wrap justify-center gap-3 md:justify-start">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`rounded-full border px-5 py-2 text-sm font-semibold transition-all ${
+                // Penyempurnaan Dark Mode pada tombol filter
+                className={`cursor-pointer rounded-full border px-5 py-2 text-sm font-semibold transition-all ${
                   activeCategory === cat
-                    ? "border-red-900 bg-red-900 text-white shadow-md"
-                    : "border-slate-300 bg-white text-slate-600 hover:border-red-900 hover:text-red-900"
+                    ? "border-red-900 bg-red-900 text-white shadow-md dark:border-red-800 dark:bg-red-800"
+                    : "border-slate-300 bg-white text-slate-600 hover:border-red-900 hover:text-red-900 dark:border-white/10 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-red-400 dark:hover:text-red-400"
                 }`}
               >
                 {cat}
@@ -140,24 +141,24 @@ export default function GalleryClient({ initialData }: GalleryClientProps) {
           )}
 
           {/* Kontrol Pagination Tetap Sama */}
-          {totalPages > 1 && (
+{totalPages > 1 && (
             <div className="mt-16 flex items-center justify-center gap-4">
               <button
                 onClick={() => setCurrentPage((prev) => prev - 1)}
                 disabled={currentPage === 1}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-50 disabled:hover:bg-white"
+                className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-50 disabled:hover:bg-white dark:border-white/10 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:disabled:hover:bg-slate-900"
               >
                 <ChevronLeft size={20} />
               </button>
-              <span className="font-medium text-slate-600">
+              <span className="font-medium text-slate-600 dark:text-slate-400">
                 Halaman{" "}
-                <span className="font-bold text-red-900">{currentPage}</span>{" "}
+                <span className="font-bold text-red-900 dark:text-red-400">{currentPage}</span>{" "}
                 dari {totalPages}
               </span>
               <button
                 onClick={() => setCurrentPage((prev) => prev + 1)}
                 disabled={currentPage === totalPages}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-50 disabled:hover:bg-white"
+                className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-50 disabled:hover:bg-white dark:border-white/10 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:disabled:hover:bg-slate-900"
               >
                 <ChevronRight size={20} />
               </button>

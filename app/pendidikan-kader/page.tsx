@@ -7,9 +7,9 @@ export default function PagePendidikanKader() {
   return (
     <>
       <main className="relative min-h-screen bg-slate-50 pt-32 dark:bg-slate-950">
-        <div className="bg-pattern absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-15" />
+        <div className="bg-pattern pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-15" />
         <Navbar />
-        <div className="container mx-auto max-w-3xl px-6">
+        <div className="container z-10 mx-auto max-w-3xl px-6">
           {/* Bungkus seluruh konten utama dengan FadeInStagger */}
           <FadeInStagger>
             {/* Header Halaman */}
