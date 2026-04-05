@@ -13,10 +13,10 @@ export const routeItems = {
   },
   kontak: {
     label: "Kontak",
-    href: "/#kontak"
+    href: "/kontak"
   },
   pendidikan: {
-    label: "Pendidikan PMKRI",
+    label: "Pendidikan",
     href: "/pendidikan-kader"
   },
   galeri: {
@@ -25,6 +25,6 @@ export const routeItems = {
   },
   pendaftaran: {
     label: "Pendaftaran Anggota",
-    href: "/pendaftaran-kader"
+    href: "/pendaftaran"
   },
 };

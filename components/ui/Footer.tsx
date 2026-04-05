@@ -13,7 +13,8 @@ export const Footer = () => {
   const firstRouteList = [
     routeItems.sejarah,
     routeItems.visiMisi,
-    routeItems.pendidikan,
+    { ...routeItems.pendidikan, label: "Pendidikan PMKRI"},
+    // routeItems.pendidikan,
   ];
 
   const secondRouteList = [

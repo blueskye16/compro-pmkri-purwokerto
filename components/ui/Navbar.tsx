@@ -1,16 +1,25 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { routeItems } from "@/components/utils/routePath";
 import { X, Menu } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export const Navbar = () => {
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const pathname = usePathname();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -22,9 +31,10 @@ export const Navbar = () => {
   const isNavActive = isScrolled || !isHomePage;
 
   const navItems = [
-    routeItems.beranda,
     routeItems.sejarah,
     routeItems.visiMisi,
+    routeItems.pendidikan,
+    routeItems.galeri,
     routeItems.kontak,
   ];
 
@@ -33,33 +43,57 @@ export const Navbar = () => {
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${isNavActive ? "bg-white/90 py-3 shadow-sm backdrop-blur-md" : "bg-transparent py-5"}`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 md:px-12">
-        <div className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           {/* Placeholder for Logo */}
           <div className="flex h-10 w-10 items-center justify-center rounded-full font-serif text-xl font-bold text-white">
-            <img src="/logo-pmkri-pwt.png" alt="icon" />
+            <Image
+              src="/logo-pmkri-pwt.png"
+              alt="icon"
+              width={200}
+              height={200}
+            />
           </div>
           <span
             className={`font-serif text-lg font-bold tracking-tight ${isNavActive ? "text-slate-900" : "text-white"}`}
           >
             PMKRI Purwokerto
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               // href={`#${item.toLowerCase().replace(" ", "-")}`}
               className={`text-sm font-medium transition-colors hover:text-amber-500 ${isNavActive ? "text-slate-600" : "text-white/90"}`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <button className="transform rounded-full bg-red-900 px-6 py-2 text-sm font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-red-800 hover:shadow-xl">
+          <Link
+            href={routeItems.pendaftaran.href}
+            className="transform cursor-pointer rounded-full bg-red-900 px-6 py-2 text-sm font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-red-800 hover:shadow-xl"
+          >
             Bergabung
-          </button>
+          </Link>
+          {mounted && (
+            <button
+              // Gunakan resolvedTheme di sini
+              onClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              }
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 text-slate-600 transition-all hover:scale-110 dark:bg-slate-800 dark:text-amber-400"
+            >
+              {/* Gunakan resolvedTheme di sini juga */}
+              {resolvedTheme === "dark" ? (
+                <Sun size={18} />
+              ) : (
+                <Moon size={18} />
+              )}
+            </button>
+          )}
         </nav>
 
         {/* Mobile Nav Toggle */}
@@ -96,9 +130,12 @@ export const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-              <button className="w-full rounded-md bg-red-900 px-6 py-3 font-semibold text-white">
+              <Link
+                href={routeItems.pendaftaran.href}
+                className="w-full rounded-md bg-red-900 px-6 py-3 font-semibold text-white"
+              >
                 Bergabung
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}

@@ -18,7 +18,7 @@ export const VisionMissionSection = ({
   return (
     <section
       id="visi-misi"
-      className="py-24 bg-slate-50 relative overflow-hidden"
+      className="py-24 bg-slate-50 relative overflow-hidden dark:bg-slate-950 transition-colors duration-500"
     >
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-125 h-125 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
