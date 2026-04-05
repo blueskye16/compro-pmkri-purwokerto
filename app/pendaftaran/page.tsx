@@ -9,7 +9,7 @@ export default function PageBergabung() {
   return (
     <main className="min-h-screen bg-slate-50 pt-32">
       <Navbar />
-      <div className="container mx-auto px-6 md:px-12 mb-14">
+      <div className="container mx-auto mb-14 px-6 md:px-12">
         <FadeInStagger>
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             {/* KOLOM KIRI: Narasi dan Call to Action */}
@@ -91,19 +91,21 @@ export default function PageBergabung() {
                 <div className="flex flex-col gap-4 sm:flex-row">
                   {/* Ganti URL href di bawah ini dengan link Google Form atau WhatsApp pendaftaran */}
                   <a
-                    href="https://forms.gle/contoh-link-pendaftaran"
+                    href="https://www.instagram.com/pmkri.purwokerto?igsh=NDVtYnd0bTgyaTRz"
+                    // href="https://forms.gle/contoh-link-pendaftaran"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex h-14 items-center justify-center gap-2 rounded-md bg-red-900 px-8 text-base font-bold text-white transition-all hover:bg-red-800 hover:shadow-lg"
                   >
                     Daftar MPAB Sekarang <ArrowRight size={18} />
                   </a>
-                  <Link
-                    href="/#kontak"
+                  <a
+                    href="https://wa.me/6281234567890"
+                    target="_blank"
                     className="inline-flex h-14 items-center justify-center rounded-md border-2 border-slate-200 bg-transparent px-8 text-base font-bold text-slate-700 transition-all hover:border-slate-300 hover:bg-slate-100"
                   >
                     Tanya Narahubung
-                  </Link>
+                  </a>
                 </div>
               </FadeIn>
             </div>

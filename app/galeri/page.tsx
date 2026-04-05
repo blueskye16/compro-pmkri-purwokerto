@@ -11,7 +11,7 @@ async function getGalleryData(): Promise<SanityGalleryData[]> {
     "mainImageUrl": mainImageUrl.asset->url,
     "category": category->title
   }`;
-  
+
   return await client.fetch(query);
 }
 

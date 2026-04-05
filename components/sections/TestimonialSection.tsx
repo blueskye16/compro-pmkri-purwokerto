@@ -20,7 +20,7 @@ export const TestimonialSection = ({
   return (
     // PERBAIKAN: Background transisi. Terang = Merah pekat, Gelap = Slate pekat dengan gradient
     <section className="relative overflow-hidden bg-red-950 py-24 text-white transition-colors duration-500 dark:bg-slate-950 dark:bg-radial dark:from-red-900/20 dark:to-slate-950">
-    {/* <section className="relative overflow-hidden bg-red-950 py-24 text-white transition-colors duration-500 dark:bg-slate-950 dark:bg-radial dark:from-red-900/20 dark:to-slate-950"> */}
+      {/* <section className="relative overflow-hidden bg-red-950 py-24 text-white transition-colors duration-500 dark:bg-slate-950 dark:bg-radial dark:from-red-900/20 dark:to-slate-950"> */}
       {/* Texture overlay */}
       <div className="bg-pattern absolute inset-0 opacity-20 transition-opacity duration-500" />
 

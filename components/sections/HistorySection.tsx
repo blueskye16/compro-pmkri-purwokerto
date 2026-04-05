@@ -27,7 +27,7 @@ export const HistorySection = ({ data }: { data: SanityHistoryData }) => {
                 width={1000}
                 height={1000}
                 // FOTO: Tambahkan dark:opacity-90 agar foto yang terlalu terang tidak menyilaukan mata di dark mode
-                className="h-125 w-full rounded-lg border border-slate-300 object-cover shadow-xl grayscale-75 transition-all duration-500 dark:border-white/10 dark:opacity-90 object-[25%_75%]"
+                className="h-125 w-full rounded-lg border border-slate-300 object-cover object-[25%_75%] shadow-xl grayscale-75 transition-all duration-500 dark:border-white/10 dark:opacity-90"
               />
               {/* <img
                 src={data.imageUrl}

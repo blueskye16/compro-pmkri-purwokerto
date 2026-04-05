@@ -7,7 +7,7 @@ export default function PagePendidikanKader() {
   return (
     <>
       <main className="relative min-h-screen bg-slate-50 pt-32 dark:bg-slate-950">
-        <div className="bg-pattern absolute inset-0 opacity-15 transition-opacity duration-500" />
+        <div className="bg-pattern absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-15" />
         <Navbar />
         <div className="container mx-auto max-w-3xl px-6">
           {/* Bungkus seluruh konten utama dengan FadeInStagger */}
@@ -17,7 +17,7 @@ export default function PagePendidikanKader() {
               <span className="text-sm font-bold tracking-wider text-amber-600 uppercase">
                 Pendidikan Kader
               </span>
-              <h1 className="mt-2 font-serif text-4xl font-bold text-red-900 dark:text-red-400 md:text-5xl">
+              <h1 className="mt-2 font-serif text-4xl font-bold text-red-900 md:text-5xl dark:text-red-400">
                 Tiga Benang Merah
               </h1>
             </FadeIn>

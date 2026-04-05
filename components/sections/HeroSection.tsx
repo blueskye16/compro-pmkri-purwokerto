@@ -1,7 +1,9 @@
 "use client";
+import Link from "next/link";
 import { SanityHeroData } from "@/lib/sanity-types";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { routeItems } from "@/components/utils/routePath";
 
 export const HeroSection = ({ data }: { data: SanityHeroData }) => {
   return (
@@ -58,12 +60,18 @@ export const HeroSection = ({ data }: { data: SanityHeroData }) => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <button className="flex w-full items-center justify-center gap-2 rounded-md bg-red-900 px-6 py-3 font-semibold text-white transition-colors hover:bg-red-800 sm:w-auto sm:px-8 sm:py-4">
+          <Link
+            href={routeItems.pendaftaran.href}
+            className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-red-900 px-6 py-3 font-semibold text-white transition-colors hover:bg-red-800 sm:w-auto sm:px-8 sm:py-4"
+          >
             {data.primaryCtaText} <ArrowRight size={18} />
-          </button>
-          <button className="w-full rounded-md border border-white/30 bg-transparent px-6 py-3 font-medium text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-8 sm:py-4">
+          </Link>
+          <Link
+            href={"#sejarah"}
+            className="w-full cursor-pointer rounded-md border border-white/30 bg-transparent px-6 py-3 font-medium text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-8 sm:py-4"
+          >
             {data.secondaryCtaText}
-          </button>
+          </Link>
         </motion.div>
       </div>
 

@@ -5,26 +5,26 @@ export const routeItems = {
   },
   sejarah: {
     label: "Sejarah",
-    href: "/sejarah"
+    href: "/sejarah",
   },
   visiMisi: {
     label: "Visi Misi",
-    href: "/#visi-misi"
+    href: "/#visi-misi",
   },
   kontak: {
     label: "Kontak",
-    href: "/kontak"
+    href: "/kontak",
   },
   pendidikan: {
     label: "Pendidikan",
-    href: "/pendidikan-kader"
+    href: "/pendidikan-kader",
   },
   galeri: {
     label: "Galeri",
-    href: "/galeri"
+    href: "/galeri",
   },
   pendaftaran: {
     label: "Pendaftaran Anggota",
-    href: "/pendaftaran"
+    href: "/pendaftaran",
   },
 };

@@ -120,7 +120,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
+        <div className="flex flex-col items-start justify-between gap-2 border-t border-white/10 pt-8 md:flex-row">
           <div className="text-sm text-slate-600">
             <p>
               © {new Date().getFullYear()} DPC PMKRI Cabang Purwokerto. All
