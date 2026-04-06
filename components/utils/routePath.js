@@ -27,4 +27,8 @@ export const routeItems = {
     label: "Pendaftaran Anggota",
     href: "/pendaftaran",
   },
+  waMalona: {
+    label: "Whatsapp Sekretaris",
+    href: "https://wa.me/62895360851019",
+  }
 };

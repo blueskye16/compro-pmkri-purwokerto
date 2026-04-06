@@ -73,7 +73,7 @@ export default function GalleryClient({ initialData }: GalleryClientProps) {
       <main className="relative min-h-screen bg-slate-50 pt-32 dark:bg-slate-950">
         <div className="bg-pattern pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-15" />
         <Navbar />
-        <div className="container z-10 mx-auto mb-14 px-6 md:px-12">
+        <div className="z-10 container mx-auto mb-14 px-6 md:px-12">
           <div className="mb-8 border-b border-slate-300 pb-8 text-center md:text-left">
             <span className="text-sm font-bold tracking-wider text-amber-600 uppercase">
               Dokumentasi
@@ -84,7 +84,7 @@ export default function GalleryClient({ initialData }: GalleryClientProps) {
           </div>
 
           {/* Filter Kategori Dinamis */}
-<div className="mb-10 flex flex-wrap justify-center gap-3 md:justify-start">
+          <div className="mb-10 flex flex-wrap justify-center gap-3 md:justify-start">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat}
@@ -141,7 +141,7 @@ export default function GalleryClient({ initialData }: GalleryClientProps) {
           )}
 
           {/* Kontrol Pagination Tetap Sama */}
-{totalPages > 1 && (
+          {totalPages > 1 && (
             <div className="mt-16 flex items-center justify-center gap-4">
               <button
                 onClick={() => setCurrentPage((prev) => prev - 1)}
@@ -152,7 +152,9 @@ export default function GalleryClient({ initialData }: GalleryClientProps) {
               </button>
               <span className="font-medium text-slate-600 dark:text-slate-400">
                 Halaman{" "}
-                <span className="font-bold text-red-900 dark:text-red-400">{currentPage}</span>{" "}
+                <span className="font-bold text-red-900 dark:text-red-400">
+                  {currentPage}
+                </span>{" "}
                 dari {totalPages}
               </span>
               <button

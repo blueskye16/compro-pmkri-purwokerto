@@ -3,6 +3,7 @@ import { Footer } from "@/components/ui/Footer";
 import { FadeIn, FadeInStagger } from "@/components/ui/FadeIn";
 import { MapPin, Mail, ExternalLink } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { routeItems } from "@/components/utils/routePath";
 
 export default function KontakPage() {
   return (
@@ -10,13 +11,8 @@ export default function KontakPage() {
       <main className="relative min-h-screen overflow-hidden bg-slate-50 pt-32 pb-20 transition-colors duration-500 dark:bg-slate-950">
         {/* Background Pattern: Opacity disesuaikan untuk mode gelap agar tidak bertabrakan */}
         <div className="bg-pattern pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-15" />
-
+        
         <Navbar />
-
-        {/* HIASAN ELEGAN & SUPER RINGAN (Diperbesar radius blurnya menjadi 100px agar lebih halus) */}
-        {/* <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-red-900/10 blur-[100px] dark:bg-red-900/20" />
-        <div className="pointer-events-none absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-amber-500/10 blur-[100px]" /> */}
-
         <div className="relative z-10 container mx-auto px-6 md:px-12">
           <div className="mb-12 border-b border-slate-300 pb-8 text-center transition-colors duration-500 md:text-left dark:border-white/10">
             <span className="text-sm font-bold tracking-wider text-amber-600 uppercase dark:text-amber-500">
@@ -95,12 +91,12 @@ export default function KontakPage() {
                       Butuh respons cepat? Hubungi Sekretaris kami via WhatsApp.
                     </p>
                     <a
-                      href="https://wa.me/6281234567890"
+                      href={routeItems.waMalona.href}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-3 inline-flex items-center gap-2 font-semibold text-amber-600 transition-colors hover:text-red-900 dark:text-amber-500 dark:hover:text-red-400"
                     >
-                      +62 812-3456-7890 <ExternalLink size={16} />
+                      +62 895-3608-51019 <ExternalLink size={16} />
                     </a>
                   </div>
                 </div>
@@ -111,7 +107,7 @@ export default function KontakPage() {
             <FadeInStagger className="h-full w-full">
               <FadeIn className="h-full w-full">
                 {/* OPTIMASI MOBILE: Menggunakan tinggi spesifik 400px untuk HP, dan menyesuaikan hingga 600px di Desktop */}
-                <div className="group relative h-100 w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-md transition-all duration-500 hover:shadow-xl lg:h-full lg:min-h-[600px] dark:border-white/10 dark:bg-slate-800">
+                <div className="group relative h-100 w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-md transition-all duration-500 hover:shadow-xl lg:h-full lg:min-h-150 dark:border-white/10 dark:bg-slate-800">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.445422348309!2d109.23091889999999!3d-7.415854800000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e5e6ca2a04b%3A0xdf3624885ae4bc78!2sPMKRI%20Cabang%20Purwokerto%20%22St%20Paulus%22!5e0!3m2!1sid!2sid!4v1775399459967!5m2!1sid!2sid"
                     width="100%"

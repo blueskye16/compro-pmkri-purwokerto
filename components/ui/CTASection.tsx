@@ -64,7 +64,7 @@ export const CTASection = () => {
             <div className="min-w-0 flex-1">
               <h4 className="mb-1 font-bold text-white">Telepon / Whatsapp</h4>
               <p className="text-sm break-all text-slate-400">
-                +62 895-3608-1019 (Humas)
+                +62 895-3608-51019 (Sekretaris)
               </p>
             </div>
           </div>
