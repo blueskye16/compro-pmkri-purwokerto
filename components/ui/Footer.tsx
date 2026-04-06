@@ -90,7 +90,7 @@ export const Footer = () => {
                   <IoIosMail />
                 </div>
               </a>
-              <a href="https://wa.me/+6289536081019" target="_blank">
+              <a href={routeItems.waMalona.href} target="_blank">
                 <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/5 text-white/50 transition-colors hover:bg-amber-500 hover:text-white">
                   <FaWhatsapp />
                 </div>
