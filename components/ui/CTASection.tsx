@@ -1,4 +1,6 @@
 import { MapPin, Mail, Phone } from "lucide-react";
+import Link from "next/link";
+import { routeItems } from "../utils/routePath";
 
 export const CTASection = () => {
   return (
@@ -18,12 +20,12 @@ export const CTASection = () => {
           atau kemitraan lembaga.{" "}
         </p>
         <div className="flex flex-col gap-2 sm:flex-row">
-          <button className="rounded-md bg-amber-500 px-8 py-2 text-center font-bold text-slate-900 transition-colors hover:bg-amber-400">
+          <Link href={routeItems.pendaftaran.href} className="rounded-md bg-amber-500 px-8 py-2 text-center font-bold text-slate-900 transition-colors hover:bg-amber-400">
             Daftar Sekarang
-          </button>
-          <button className="rounded-md border border-white/20 bg-transparent px-8 py-2 text-center font-semibold text-white transition-colors hover:bg-white/10">
+          </Link>
+          <Link href={routeItems.waMalona.href} className="rounded-md border border-white/20 bg-transparent px-8 py-2 text-center font-semibold text-white transition-colors hover:bg-white/10">
             Hubungi Pengurus
-          </button>
+          </Link>
         </div>
       </div>
       {/* Contact Info */}
