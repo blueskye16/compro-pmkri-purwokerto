@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "PMKRI Cabang Purwokerto",
     images: [
       {
-        url: "/cover-pmkri-pwt.png",
+        url: "/cover-web-pmkri-pwt.png",
         width: 1200,
         height: 630,
         alt: "Preview Web PMKRI Purwokerto",
