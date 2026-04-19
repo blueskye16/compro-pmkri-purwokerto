@@ -50,8 +50,16 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Preview Web PMKRI Purwokerto",
+        type: "image/png",
       },
     ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "PMKRI Cabang Purwokerto",
+    description: "Pro Ecclesia Et Patria!",
+    images: ["https://pmkri-purwokerto.vercel.app/cover-web-pmkri-pwt.png"],
   },
 
   // Memastikan robot mesin pencari mengindeks web Anda
